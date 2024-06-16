@@ -13,7 +13,7 @@ enum class Difficulty {
 class Options {
 private:
 	Difficulty selectedDiff;
-	sf::Font* selectedFont;
+	int selectedFont;
 	sf::Font font1;
 	sf::Font font2;
 	Button diffEasy;
@@ -21,19 +21,24 @@ private:
 	Button diffHard;
 	Button butFont1;
 	Button butFont2;
+	Button butBack;
+	sf::Text optionsTitle;
 
 
 public:
 	Options();
-	sf::Font getFont();
+	int getFont();
 	Difficulty getDiff();
-	void update();
+	void update(const sf::Vector2f& mousePos);
 	void draw(sf::RenderWindow &window);
 	Button* getButEasy();
 	Button* getButNorm();
 	Button* getButHard();
 	Button* getButFont1();
 	Button* getButFont2();
+	Button* getButBack();
+	void setDiff(Difficulty diff);
+	void setFont(const int &which);
 };
 
 

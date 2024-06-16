@@ -14,6 +14,7 @@ void Generator::generator(const std::string &diff) {
 
 	while (std::getline(file, line)) {
 		wordList.push_back(line);
+
 	}
 
 	file.close();

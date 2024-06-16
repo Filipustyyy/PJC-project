@@ -6,17 +6,19 @@
 #include "SFML/Graphics.hpp"
 #include <vector>
 #include <string>
-#include "Generator.hpp"
 
 class Baloob {
 private:
-	sf::Text theBloob;
+	sf::Font font;
 	std::string word;
 	float speed;
 
 public:
-	Baloob(const std::string& word, float speed);
+	Baloob(const std::string& word, sf::Font fnt, float speed);
+	std::string getWord();
 	void update();
+	void draw(sf::RenderWindow &window);
+	sf::Text theBloob;
 };
 
 

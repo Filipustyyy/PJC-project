@@ -9,17 +9,19 @@
 
 class Menu {
 private:
-
-
-public:
 	Button butNew;
 	Button butLoad;
 	Button butOptions;
 	Button butExit;
+
+public:
 	Menu();
+	void update(const sf::Vector2f& mousePos);
+	void draw(sf::RenderWindow &window);
 	Button* getButNew();
 	Button* getButLoad();
 	Button* getButOptions();
+	Button* getButExit();
 };
 
 
